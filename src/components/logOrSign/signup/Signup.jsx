@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { registerUser } from "../../../utils/fetch";
 import "./Signup.css";
 
 const Signup = ({ handleChange, handleSubmit, logOrSignSetters }) => {
@@ -23,7 +23,7 @@ const Signup = ({ handleChange, handleSubmit, logOrSignSetters }) => {
     <div className="flex flex-column signup">
       <form
         onSubmit={(e) =>
-          handleSubmit(e, testSign, logOrSignSetters, username, email, password)
+          handleSubmit(e, registerUser, logOrSignSetters, username, email, password)
         }
         className="flex flex-column signup-form"
       >
